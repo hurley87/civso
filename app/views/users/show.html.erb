@@ -1,0 +1,28 @@
+<%= provide(:title, @user.name) %>
+
+<h1> <%= @user.name %></h1>
+
+<% if @user.orgs.empty? %>
+  <p> This user has no orgs </p>
+<% else %>
+  <p> <%= @user.name %>'s Orgs: </p>
+
+  <table id="org-summary">
+    <tr>
+      <td><h3>Title</h3></td>
+      <td><h3>Content</h3></td>
+    </tr>
+    <% @user.orgs.each do |org| %>
+      <tr>
+        <td><%= link_to org.title, org %></td>
+        <td><%= org.content %></td>
+        
+        <% if signed_in? && current_user.admin? %> 
+          <td><%= link_to 'Edit', edit_org_path(org) %></td>
+          <td><%= link_to 'Destroy', org, confirm: 'Are you sure?', method: :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>

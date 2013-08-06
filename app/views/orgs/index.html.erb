@@ -1,0 +1,29 @@
+
+<div id="orgs">  
+
+  <h3><%= link_to 'New Org', new_org_path %></h3>
+  
+  <%= will_paginate %>
+
+  <table id="org-summary" border="1px">
+    <tr>
+      <td><h3>Title</h3></td>
+      <td><h3>Content</h3></td>
+    </tr>
+    <% @orgs.each do |org| %>
+      <tr>
+        <td width="30%"><%= link_to org.title, org %></td>
+        <td width="70%"><%= org.content %></td>
+        
+        <% if signed_in? && current_user.admin? %> 
+          <td><%= link_to 'Edit', edit_org_path(org) %></td>
+          <td><%= link_to 'Destroy', org, confirm: 'Are you sure?', method: :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= will_paginate %>
+  
+  <br />
+</div>
