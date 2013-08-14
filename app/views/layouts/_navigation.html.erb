@@ -16,7 +16,7 @@
     </li>
   <% end %>
 
-  <% if current_user.admin? %>
+  <% if signed_in? && current_user.admin %>
       <li><%= link_to "Admin: list all Users", users_path %></li>
   <% end %>
 
