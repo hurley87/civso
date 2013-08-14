@@ -1,11 +1,12 @@
 <%= provide(:title, @user.name) %>
 
 <h1> <%= @user.name %></h1>
+<%= link_to 'Account Settings', edit_user_path(current_user) %>
 
 <% if @user.orgs.empty? %>
   <p> This user has no orgs </p>
 <% else %>
-  <p> <%= @user.name %>'s Orgs: </p>
+  <h2> <%= @user.name %>'s Orgs: </h2>
 
   <table id="org-summary">
     <tr>

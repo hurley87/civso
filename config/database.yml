@@ -15,9 +15,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: civco_development
+  database: civso_development
   pool: 5
-  username: civco
+  username: civso
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -41,15 +41,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: civco_test
+  database: civso_test
   pool: 5
-  username: civco
+  username: civso
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: civco_prod
+  database: civso_prod
   pool: 5
-  username: civco
+  username: civso
   password:
