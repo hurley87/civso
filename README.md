@@ -3,4 +3,4 @@ Civco
 
 Colaboration between Empower and SmartLabs
 
-Will serve as a method to efficiently connect non profit organizations and allow them to easily collaborate
+Connect and collaborate with social enterprises, non-profits, and charities doing amazing work around the world.
