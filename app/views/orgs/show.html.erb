@@ -1,0 +1,32 @@
+
+  <div id="org">
+    
+    <h1><%= @org.title %></h1>
+      <p>Creator:<%= @org.user.name %></p>
+      <p>Tags:<%= join_tags(@org) %></p>
+      <p>Industry:<%= @org.industry %></p>
+      <p>Description:<%= @org.description %></p>
+
+      <br />
+      <br />
+      <br />
+
+    <b>Comments</b>
+    <%= render "comments/comment" %>
+
+    <h3>Leave a Comment:</h3>
+
+  <% if signed_in? %>
+    <%= render "comments/form" %>
+  <% else %>
+    <p>Please sign in to leave a comment!</p>
+  <% end %>
+
+    <br />
+
+    <%= link_to 'Edit', edit_org_path(@org) %> |
+    <%= link_to 'All Orgs', orgs_path %>
+  
+</div>
+ 
+

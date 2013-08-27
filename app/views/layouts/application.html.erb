@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Civso</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+
+</head>
+
+<body>
+    <header class="navbar navbar-fixed-top">
+        <nav id="nav"class="navbar-inner">
+            <div class="container">
+                <%= render 'layouts/navigation' %>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="span12">
+                        <%= render 'layouts/messages' %>
+                        <%= yield %>
+                    </div>
+                </div>
+                <footer>
+                	<p class="pull-right"><a href="#">Back to top</a></p>
+        		<p>&copy; 2013 Civso, Inc. &middot;</p>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+
+
+<%= debug(params) if Rails.env.development? %>
+
+
+<% if false %>
+
+<% if !current_page?(root_path) %>
+	<%= render 'layouts/logo' %>
+	<%= render 'layouts/menu' %>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <% if key.to_s == 'success' %>
+    <div class="flash-success"> <p><%= value %></p> </div>
+  <% elsif key.to_s == 'error' %>
+    <div class="flash-error"> <p><%= value %></p> </div>
+  <% else %>
+    <p><%= value %></p>
+  <% end %>
+<% end %>
+
+
+<%= yield %>
+
+<% if !current_page?(root_path) %>
+  <%= render 'layouts/footer' %>
+<% end %>
+
+
+</body>
+
+<% end %>
+
+</html>
