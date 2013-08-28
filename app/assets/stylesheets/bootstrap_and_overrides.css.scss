@@ -1,11 +1,17 @@
+
+$navbarBackground: #81b71a;
+$btn-success-bg: #81b71a;
+
+
 @import "bootstrap";
 
 body {
     padding-top: 50px;
 }
 
+img {
+	margin: 20px;
+}
+
 @import "bootstrap-responsive";
 
-body {
-	background-color: #81b71a;
-}
