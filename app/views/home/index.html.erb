@@ -8,10 +8,29 @@
 			<div class="span10">
 				<h1>Promoting a civil society around the world. 
 				</h1>
-				<button type="button" class="btn btn-success btn-lg">Sign Up</button>
+				<button type="button" class="btn btn-success btn-lg"><%= link_to('Sign up', signup_path)  %></button>
 			</div>
-
-				
-			
 		</div>
 </div>
+<h2>Featured</h2>
+		<div id="featured" class="container row-fluid">
+
+			<div class="span3">
+				<h4>SmartLabs</h4>
+				<p>Bridging the gap between student skills and the needs of social organizations.</p>
+			</div>
+			<div class="span3">
+				<h4>Empower Energy Group</h4>
+				<p>Empowering communities through renewable resources.</p>
+			</div>
+			<div class="span3">
+				<h4>Warm Heart</h4>
+				<p>Volunteers fighting poverty, traffiking and child abuse in North Thialand.</p>
+			</div>
+			<div class="span3">
+				<h4>Access Telemed</h4>
+				<p>Low-cost Andriod telemedicine for the developing world.</p>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-success btn-lg visualize"><%= link_to('View the Map', map_path)  %></button>
