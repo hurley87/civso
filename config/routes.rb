@@ -13,12 +13,12 @@ Civco::Application.routes.draw do
   resources :retrievals, only: [:new, :create, :edit, :update]
 
   get "home/index"
-  get 'map' => 'home#map'
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/retrievals', to: 'retrievals#new'
+  match '/map', to: 'home#map'
   
 
   # The priority is based upon order of creation:

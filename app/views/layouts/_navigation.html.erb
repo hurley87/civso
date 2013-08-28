@@ -7,8 +7,14 @@
     <li>
     <%= link_to('Logout', signout_path, :method=>'delete') %>
     </li>
-    
+
   <% else %>
+    <li>
+      <%= link_to('Connect', map_path)  %>
+    </li>
+    <li>
+      <%= link_to('Collaborate', orgs_path)  %>
+    </li>
     <li>
     <%= link_to('Login', signin_path)  %>
     </li>
