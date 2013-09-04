@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: civso_developmentz
+  database: civso_development
   pool: 5
   host: localhost
 
